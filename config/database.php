@@ -50,7 +50,7 @@ return [
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
-            'prefix' => '',
+            'prefix' => 'shop_admin_',
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
@@ -81,6 +81,18 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
         ],
+        'mongodb' => array(         //MongoDB
+            'driver'   => 'mongodb',
+            'host'     => '47.101.44.77',  //数据库服务器的ip
+            'port'     => 27017,            //数据库服务器上mongodb服务对应的端口
+            'database' => 'shop',  //数据库名称
+            'username' => 'shop_root',
+            'password' => 'root_shop',
+            'options' => array(
+            'database' => 'shop' // 要使用的数据库
+            )
+         
+        ),
 
     ],
 
