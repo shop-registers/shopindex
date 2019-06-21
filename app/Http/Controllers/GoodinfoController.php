@@ -18,14 +18,15 @@ class GoodinfoController extends Controller
      * 商品的详情页展示 
      */
     public function good_showinfo(Request $request){
-    	$good_id=$request->input('goods_id');
+    	$good_id=$request->input('good_id');
     	$res['good']=Goods::where('id',$good_id)->get()->toArray();
-    	$res['attr']=Good_attr::where('good_id',$good_id)->get()->toArray();
-    	foreach ($res['attr'] as $k=>$v) {
-		    $res['attr'][]=explode(',',$v->attr_desc);
+    	$res['attr']=Good_attr::where('good_id',$good_id)->get();
+    	foreach ($res['attr'] as $v) {
+		    $v->attr_desc=explode(',',$v->attr_desc);
 		}
-    	$res['goodimg']=Goods_img::where('goods_id')->select('img_src')->get()->toArray();
-    	if(!isset($res['good'][0]) && !isset($res['attr'][0]) && !isset($res['goodimg'][0])){
+    	$res['goodimg']=Goods_img::where('goods_id',$good_id)->select('img_src')->get()->toArray();
+
+    	if(count($res['good'])!=0){
 			json(40011,"查询成功",$res);
     	}else{
     		json(40014,"查询失败");
@@ -49,7 +50,8 @@ class GoodinfoController extends Controller
      * 添加到购物车
      */
     public function add_shopcart(Request $request){
-    	$data['good_id']=$request->input('goods_id');
+        $data['good_id']=$request->input('goods_id');
+    	$data['good_name']=$request->input('goods_name');
 		$data['user_id']=$request->input('user_id');
 		$data['addtime']=$request->input('addtime');
 		$data['good_price']=$request->input('good_price');
@@ -108,7 +110,7 @@ class GoodinfoController extends Controller
      * ajax改变商品价格
      */
     public function goodattr_change(Request $request){
-    	$attr=(string)$request->input('attr');
+    	$attr=$request->input('str');
     	$attrinfo=Goods_sku::where('sku_desc',"$attr")->select('sku_id','price','inventory')->get();
     	if(isset($attrinfo[0])){
             json(40011,"查询成功",$attrinfo);
