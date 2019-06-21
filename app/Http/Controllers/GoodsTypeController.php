@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Goodstype;
 use App\Models\Goods;
+use App\Models\Brand;
+use Illuminate\Http\Response;
 
 class GoodsTypeController extends Controller
 {
@@ -11,16 +13,15 @@ class GoodsTypeController extends Controller
 	{
 		$data = Goodstype::all()->toArray();
 		$data =$this->getTree($data);
-		return json_encode($data);
+		return Response()->json($data);
 	}
 
 	public function getgoods(Request $request,$id=null)
 	{
-		$url = 'F:/phpStudy/PHPTutorial/WWW/SHOP/public/img/';
 		$data = Goods::where('type_id',$id)
 				->select('id','good_name','good_desc','good_price','good_img')
 				->get();
-		return json_encode($data);
+		return Response()->json($data);
 	}
 
 	/**
@@ -35,12 +36,12 @@ class GoodsTypeController extends Controller
 			$data = Goods::where('type_id',1)
 				->select('id','good_name','good_desc','good_price','good_img')
 				->get();
-			return json_encode($data);
+			return Response()->json($data);
 		}else{
 			$data = Goods::where('type_id',$id)
 				->select('id','good_name','good_desc','good_price','good_img')
 				->get();
-			return json_encode($data);
+			return Response()->json($data);
 		}
 	}
 
@@ -56,12 +57,12 @@ class GoodsTypeController extends Controller
 			$data = Goods::where('type_id',2)
 				->select('id','good_name','good_desc','good_price','good_img')
 				->get();
-			return json_encode($data);
+			return Response()->json($data);
 		}else{
 			$data = Goods::where('type_id',$id)
 				->select('id','good_name','good_desc','good_price','good_img')
 				->get();
-			return json_encode($data);
+			return Response()->json($data);
 		}
 	}
 
@@ -77,12 +78,12 @@ class GoodsTypeController extends Controller
 			$data = Goods::where('type_id',3)
 				->select('id','good_name','good_desc','good_price','good_img')
 				->get();
-			return json_encode($data);
+			return Response()->json($data);
 		}else{
 			$data = Goods::where('type_id',$id)
 				->select('id','good_name','good_desc','good_price','good_img')
 				->get();
-			return json_encode($data);
+			return Response()->json($data);
 		}
 	}
 
@@ -98,13 +99,24 @@ class GoodsTypeController extends Controller
 			$data = Goods::where('type_id',4)
 				->select('id','good_name','good_desc','good_price','good_img')
 				->get();
-			return json_encode($data);
+			return Response()->json($data);
 		}else{
 			$data = Goods::where('type_id',$id)
 				->select('id','good_name','good_desc','good_price','good_img')
 				->get();
-			return json_encode($data);
+			return Response()->json($data);
 		}
+	}
+
+	public function getbrand()
+	{
+		$url = 'http://www.shopss.com/';
+		$arr = array();
+		$data = Brand::select('brand_logo')->inRandomOrder()->take(4)->get()->toArray();
+		foreach ($data as $key => $value) {
+			$arr[] = $url.$value['brand_logo'];
+		}
+		return Response()->json($arr);
 	}
 
 	/**
