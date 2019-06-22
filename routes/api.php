@@ -23,4 +23,5 @@ Route::post('/add_shopcart','GoodinfoController@add_shopcart');//添加到购物
 Route::post('/add_order','GoodinfoController@add_order');//确认下单
 Route::get('/goodattr_change','GoodinfoController@goodattr_change');//ajax改变商品价格
 Route::get('/goodtype_show','GoodinfoController@goodtype_show');//商品分类页面展示
-Route::get('/payorder','GoodinfoController@payorder');//商品分类页面展示
+Route::get('/payorder','GoodinfoController@payorder');//支付订单页面展示数据
+Route::get('/good_pay','GoodinfoController@good_pay');//支付订单
