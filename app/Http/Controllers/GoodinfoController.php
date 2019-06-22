@@ -97,8 +97,8 @@ class GoodinfoController extends Controller
     /**
      * 商品分类页面展示
      */
-    public function goodtype_show(Request $request){
-    	$id=$request->input('id');
+    public function goodtype_show(Request $request,$id=null){
+    	
     	$res=Goods::where('type_id',$id)->get();
     	if(isset($res[0])){
             json(40011,"查询成功",$res);
