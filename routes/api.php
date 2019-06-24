@@ -24,4 +24,6 @@ Route::post('/add_order','GoodinfoController@add_order');//确认下单
 Route::get('/goodattr_change','GoodinfoController@goodattr_change');//ajax改变商品价格
 Route::get('/goodtype_show','GoodinfoController@goodtype_show');//商品分类页面展示
 Route::get('/payorder','GoodinfoController@payorder');//支付订单页面展示数据
-Route::get('/good_pay','GoodinfoController@good_pay');//支付订单
+Route::get('/payment_success','GoodinfoController@payment_success');//支付订单
+Route::get('/set_defaule_address','GoodinfoController@set_defaule_address');//更改默认地址
+Route::get('/del_address','GoodinfoController@del_address');//删除地址
