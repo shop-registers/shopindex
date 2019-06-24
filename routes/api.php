@@ -2,17 +2,22 @@
 
 use Illuminate\Http\Request;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//订单接口
+Route::any('/FullOrder','FullOrderController@FullOrder');
+Route::any('/CommentedOrder','FullOrderController@CommentedOrder');
+Route::any('/ReceiveddOrder','FullOrderController@ReceiveddOrder');
+Route::any('/PaidOrder','FullOrderController@PaidOrder');
+
+
+//地址接口
+Route::any('/Myaddress','AddressController@Myaddress');
+
+Route::any('/AddAddress','AddressController@AddAddress');
+Route::any('/DelAddress','AddressController@DelAddress');
+Route::any('/UpdateAddress','AddressController@UpdateAddress');
+
+
