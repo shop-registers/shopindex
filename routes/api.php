@@ -34,3 +34,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//购物车列表
+Route::any("/car_list",'Shopping_CartController@car_list');
+
+
+//收藏添加
+Route::post("/my_collections",'CollectionsController@my_collections');
