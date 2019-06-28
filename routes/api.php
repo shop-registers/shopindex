@@ -13,13 +13,13 @@ use Illuminate\Http\Request;
 |
 */
 Route::group(['prefix'=>'/'],function(){
-	Route::get('goodstype', 'GoodsTypeController@getgoodstype');
-	Route::get('goodslist/{id?}', 'GoodsTypeController@getgoods');
-	Route::get('getgoods1/{id?}', 'GoodsTypeController@getgoods1');
-	Route::get('getgoods2/{id?}', 'GoodsTypeController@getgoods2');
-	Route::get('getgoods3/{id?}', 'GoodsTypeController@getgoods3');
-	Route::get('getgoods4/{id?}', 'GoodsTypeController@getgoods4');
-	Route::get('brand', 'GoodsTypeController@getbrand');
+	Route::get('goodstype', 'GoodsTypeController@getgoodstype'); //
+	Route::get('goodslist/{id?}', 'GoodsTypeController@getgoods');//
+	Route::get('getgoods1/{id?}', 'GoodsTypeController@getgoods1');//分类商品1
+	Route::get('getgoods2/{id?}', 'GoodsTypeController@getgoods2');//分类商品2
+	Route::get('getgoods3/{id?}', 'GoodsTypeController@getgoods3');//分类商品3
+	Route::get('getgoods4/{id?}', 'GoodsTypeController@getgoods4');//分类商品4
+	Route::get('brand', 'GoodsTypeController@getbrand');//
 	Route::get('goodtype_show/{id?}','GoodinfoController@goodtype_show');//商品分类页面展示
 });
 Route::get('/good_onceinfo','GoodinfoController@good_showinfo');//商品的详情页展示
