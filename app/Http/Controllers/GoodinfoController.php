@@ -13,6 +13,7 @@ use App\Models\Order_master;
 use App\Models\Goods_sku;
 use App\Models\Users;
 use App\Models\Address;
+use App\Models\Order_detail;
 use Illuminate\Support\Facades\DB;
 
 class GoodinfoController extends Controller
@@ -72,8 +73,8 @@ class GoodinfoController extends Controller
     /**
      * 生成订单号
      */
-    public function create_order_code($goods_id,$sku_code){
-    	$code=date('YmdHis',time()).$sku_code.$goods_id;
+    public function create_order_code($goods_id,$user_id){
+    	$code=date('YmdHis',time()).$goods_id.$user_id.rand(1111,9999);
     	return $code;
     }
     /**
@@ -84,14 +85,23 @@ class GoodinfoController extends Controller
 		$data['goods_id']=$request->input('good_id');//商品的ID
 		/*$data['customer_name']=$request->session()->get('user_id');*///用户ID
         $data['customer_name']=1;
-		$data['order_num']=$request->input('text_box');//商品数量
-		$data['order_money']=$request->input('good_price');//订单金额
-		$data['payment_money']=$request->input('good_price')*$data['order_num'];//支付金额
-		$data['create_time']=date('Y-m-d H:i:s',time());//时间
-		$data['order_sn']=$this->create_order_code($data['goods_id'],$data['sku_code']);//订单编码
-		$res=Order_master::insertGetId($data);
-		if($res){
-			json(40015,"添加订单成功",$data['order_sn']);
+        $data['order_sn']=$this->create_order_code($data['goods_id'],$data['customer_name']);//订单编码
+        $data['create_time']=date('Y-m-d H:i:s',time());//时间
+        $res=Order_master::insertGetId($data);
+        if(!$res){
+            json(40016,"添加订单失败");return;
+        }
+        $arr['order_id']=$res;
+        $arr['product_id']=$data['goods_id'];
+		$arr['product_cnt']=$request->input('text_box');//商品数量
+		$arr['product_price']=$request->input('good_price');//订单金额
+        $arr['sku_code']=$data['sku_code'];
+		$arr['order_money']=$request->input('good_price')*$arr['product_cnt'];//支付金额
+        $arr['child_order_sn']='cd'.$this->create_order_code($data['goods_id'],$data['customer_name']);
+        $result=Order_detail::insertGetId($arr);
+		if($result){
+            $last=base64_encode("order_sn=".$data['order_sn']."&id=".$res);//总的订单号和主订单的ID
+			json(40015,"添加订单成功",$last);
 		}else{
 			json(40016,"添加订单失败");
 		}
@@ -134,29 +144,56 @@ class GoodinfoController extends Controller
     }
     public function payorder(Request $request){
         $code=$request->input('code');
+        parse_str(base64_decode($code),$arr);
+        $res['orderinfo']['order'][]=Order_detail::where('order_id',$arr['id'])->leftjoin('goods','Order_detail.product_id','=','goods.id')->leftjoin('goods_sku','Order_detail.sku_code','=','goods_sku.sku_id')->select('Order_detail.*','goods.good_name','goods_sku.sku_desc')->get()->toArray();
         /*$user_id=$request->session()->get('user_id');*/
         $user_id=1;
-        $codearr=explode(',',$code);
-        foreach($codearr as $k=>$v){
-            $res['orderinfo']['order'][]=Order_master::where('order_sn',$v)->leftjoin('goods','order_master.goods_id','=','goods.id')->select('Order_master.*','goods.good_name')->get()->toArray();
-        }
         $res['orderinfo']['total_price']=0;
         foreach($res['orderinfo']['order'] as $k=>$v){
             foreach ($v as $key => $value) {
-                $res['orderinfo']['total_price']+=$value['payment_money'];   
+                $res['orderinfo']['total_price']+=$value['order_money'];
             }
         }
         $res['user_integral']=Users::where('id',$user_id)->select('integral')->get();
         $res['address']=Address::where('u_id',$user_id)->get();
+        $res['order_sn']=$arr['order_sn'];
         if(count($res['orderinfo'])!=0){
             json(40011,"查询成功",$res);
         }else{
             json(40014,"查询失败");
         }
     }
-    public function payment_success(Request $Request){
+    public function payment_success(Request $request){
         $order_sn=$request->input('order_sn');
-        $res=Order_master::where('order_sn',$order_sn)->update(['order_status'=>1]);
+        $child_order_sn=explode(',',$request->input('child_order_sn'));
+        $result=Order_detail::where('order_sn',$order_sn)->select('product_id','sku_code')->get()->toArray();
+        $data['shipping_user']=$request->input('shipping_user');
+        $data['shipping_tel']=$request->input('shipping_tel');
+        $data['address']=$request->input('address');
+        $data['order_num']=$request->input('order_num');
+        $pay_type=$request->input('pay_list');
+        switch ($pay_type) {
+            case '微信':
+                $data['payment_method']=3;
+                break;
+            case '支付宝':
+                $data['payment_method']=2;
+                break;
+            case '网银':
+                $data['payment_method']=1;
+                break;
+        }
+        $data['order_money']=$request->input('total_price');
+        $data['payment_money']=$request->input('price');
+        $data['pay_time']=date('Y-m-d H:i:s',time());
+        $res=DB::transaction(function () use ($order_sn,$data,$result,$child_order_sn) {
+            Order_master::where('order_sn',$order_sn)->update($data);
+            foreach($child_order_sn as $k=>$v){
+                Order_detail::where('child_order_sn',$v)->update(['product_cnt'=>$data['order_num'],'order_money'=>$data['order_money'],'payment_money'=>$data['payment_money']]);
+            }
+            Goods_sku::where('sku_id',$result[0]['sku_code'])->decrement('inventory',$data['order_num']);
+            Goods::where('id',$result[0]['goods_id'])->decrement('good_inventory',$data['order_num']);
+        });
         if($res){
             json(40015,"支付成功");
         }else{
