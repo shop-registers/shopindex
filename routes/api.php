@@ -27,3 +27,4 @@ Route::get('/payorder','GoodinfoController@payorder');//支付订单页面展示
 Route::post('/payment_success','GoodinfoController@payment_success');//支付订单
 Route::get('/set_defaule_address','GoodinfoController@set_defaule_address');//更改默认地址
 Route::get('/del_address','GoodinfoController@del_address');//删除地址
+Route::get('/get_success','GoodinfoController@get_success');//删除地址

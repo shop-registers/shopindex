@@ -31,9 +31,9 @@ class GoodinfoController extends Controller
     	$res['goodimg']=Goods_img::where('goods_id',$good_id)->select('img_src')->get()->toArray();
 
     	if(count($res['good'])!=0){
-			json(40011,"查询成功",$res);
+			return json(40011,"查询成功",$res);
     	}else{
-    		json(40014,"查询失败");
+    		return json(40014,"查询失败");
     	}
     }
     /**
@@ -45,9 +45,9 @@ class GoodinfoController extends Controller
 		$data['addtime']=time();
 		$res=Collect::insert($data);
 		if($res){
-			json(40012,"添加收藏成功");
+			return json(40012,"添加收藏成功");
 		}else{
-			json(40013,"添加收藏失败");
+			return json(40013,"添加收藏失败");
 		}
     }
     /**
@@ -62,12 +62,13 @@ class GoodinfoController extends Controller
 		$data['good_price']=$request->input('good_price');
 		$data['goods_number']=$request->input('text_box');
 		$data['good_sku_code']=$request->input('sku_code');
-        
+        $data['sku_desc']=$request->input('sku_desc');
+        $data['addtime']=time();
 		$res=Shopcart::insert($data);
 		if($res){
-			json(40012,"添加购物车成功");
+			return json(40012,"添加购物车成功");
 		}else{
-			json(40013,"添加购物车失败");
+			return json(40013,"添加购物车失败");
 		}
     }
     /**
@@ -89,7 +90,7 @@ class GoodinfoController extends Controller
         $data['create_time']=date('Y-m-d H:i:s',time());//时间
         $res=Order_master::insertGetId($data);
         if(!$res){
-            json(40016,"添加订单失败");return;
+            return json(40016,"添加订单失败");return;
         }
         $arr['order_id']=$res;
         $arr['product_id']=$data['goods_id'];
@@ -101,9 +102,9 @@ class GoodinfoController extends Controller
         $result=Order_detail::insertGetId($arr);
 		if($result){
             $last=base64_encode("order_sn=".$data['order_sn']."&id=".$res);//总的订单号和主订单的ID
-			json(40015,"添加订单成功",$last);
+			return json(40015,"添加订单成功",$last);
 		}else{
-			json(40016,"添加订单失败");
+			return json(40016,"添加订单失败");
 		}
     }
     /**
@@ -113,9 +114,9 @@ class GoodinfoController extends Controller
     	$id=$request->input('id');
     	$res=Goods::where('type_id',$id)->get();
     	if(isset($res[0])){
-            json(40011,"查询成功",$res);
+            return json(40011,"查询成功",$res);
         }else{
-            json(40014,"查询失败");
+            return json(40014,"查询失败");
         }
     }
     /**
@@ -125,9 +126,9 @@ class GoodinfoController extends Controller
     	$attr=$request->input('str');
     	$attrinfo=Goods_sku::where('sku_desc',"$attr")->select('sku_id','price','inventory')->get();
     	if(isset($attrinfo[0])){
-            json(40011,"查询成功",$attrinfo);
+            return json(40011,"查询成功",$attrinfo);
         }else{
-            json(40014,"查询失败");
+            return json(40014,"查询失败");
         }
     }
     /**
@@ -137,9 +138,9 @@ class GoodinfoController extends Controller
     	$good_id=$request->input('goods_id');
     	$comment=Comment::where('objectid',$good_id)->join('user','comment.userid=user.id')->get();
     	if(isset($comment[0])){
-			json(40011,"查询成功",$comment);
+			return json(40011,"查询成功",$comment);
     	}else{
-    		json(40014,"查询失败");
+    		return json(40014,"查询失败");
     	}
     }
     public function payorder(Request $request){
@@ -158,47 +159,59 @@ class GoodinfoController extends Controller
         $res['address']=Address::where('u_id',$user_id)->get();
         $res['order_sn']=$arr['order_sn'];
         if(count($res['orderinfo'])!=0){
-            json(40011,"查询成功",$res);
+            return json(40011,"查询成功",$res);
         }else{
-            json(40014,"查询失败");
+            return json(40014,"查询失败");
         }
     }
     public function payment_success(Request $request){
         $order_sn=$request->input('order_sn');
-        $child_order_sn=explode(',',$request->input('child_order_sn'));
-        $result=Order_detail::where('order_sn',$order_sn)->select('product_id','sku_code')->get()->toArray();
-        $data['shipping_user']=$request->input('shipping_user');
-        $data['shipping_tel']=$request->input('shipping_tel');
-        $data['address']=$request->input('address');
-        $data['order_num']=$request->input('order_num');
-        $pay_type=$request->input('pay_list');
-        switch ($pay_type) {
-            case '微信':
-                $data['payment_method']=3;
-                break;
-            case '支付宝':
-                $data['payment_method']=2;
-                break;
-            case '网银':
-                $data['payment_method']=1;
-                break;
-        }
-        $data['order_money']=$request->input('total_price');
-        $data['payment_money']=$request->input('price');
-        $data['pay_time']=date('Y-m-d H:i:s',time());
-        $res=DB::transaction(function () use ($order_sn,$data,$result,$child_order_sn) {
-            Order_master::where('order_sn',$order_sn)->update($data);
-            foreach($child_order_sn as $k=>$v){
-                Order_detail::where('child_order_sn',$v)->update(['product_cnt'=>$data['order_num'],'order_money'=>$data['order_money'],'payment_money'=>$data['payment_money']]);
+        $a=Order_master::where('order_sn',$order_sn)->select('order_status')->get()->toArray();
+        if($a[0]['order_status']==1){
+            return json(40017,"已支付，请勿重复提交");
+        }else if($a[0]['order_status']==0){
+            $child_order_sn=explode(',',$request->input('child_order_sn'));
+            foreach ($child_order_sn as $key => $value) {
+                $result[]=Order_detail::where('child_order_sn',$child_order_sn)->select('product_id','sku_code')->get()->toArray();    
             }
-            Goods_sku::where('sku_id',$result[0]['sku_code'])->decrement('inventory',$data['order_num']);
-            Goods::where('id',$result[0]['goods_id'])->decrement('good_inventory',$data['order_num']);
-        });
-        if($res){
-            json(40015,"支付成功");
-        }else{
-            json(40016,"支付失败");
+            $data['shipping_user']=$request->input('shipping_user');
+            $data['shipping_tel']=$request->input('shipping_tel');
+            $data['address']=$request->input('address');
+            $data['order_num']=$request->input('order_num');
+            $pay_type=$request->input('pay_list');
+            switch ($pay_type) {
+                case '微信':
+                    $data['payment_method']=3;
+                    break;
+                case '支付宝':
+                    $data['payment_method']=2;
+                    break;
+                case '网银':
+                    $data['payment_method']=1;
+                    break;
+            }
+            $data['order_money']=$request->input('total_price');
+            $data['payment_money']=$request->input('price');
+            $data['pay_time']=date('Y-m-d H:i:s',time());
+            $data['order_status']=1;
+            $res=DB::transaction(function () use ($order_sn,$data,$result,$child_order_sn) {
+                Order_master::where('order_sn',$order_sn)->update($data);
+                foreach($child_order_sn as $k=>$v){
+                    Order_detail::where('child_order_sn',$v)->update(['product_cnt'=>$data['order_num'],'order_money'=>$data['order_money'],'payment_money'=>$data['payment_money']]);
+                }
+                foreach ($result as $key => $value) {
+                    Goods_sku::where('sku_id',$value[0]['sku_code'])->decrement('inventory',$data['order_num']);
+                    Goods::where('id',$value[0]['product_id'])->decrement('good_inventory',$data['order_num']);    
+                }
+                
+            });
+            if($res==null){
+                return json(40015,"支付成功",$order_sn);
+            }else{
+                return json(40016,"支付失败");
+            }
         }
+        
     }
     public function del_address(Request $request){
         $id=$request->input('id');
@@ -217,9 +230,18 @@ class GoodinfoController extends Controller
             Address::where('address_id',$id)->update(['default'=>1]);
         });
         if($res){
-            json(40019,"更改成功");
+            return json(40019,"更改成功");
         }else{
-            json(40020,"更改失败");
+            return json(40020,"更改失败");
+        }
+    }
+    public function get_success(Request $request){
+        $code=$request->input('code');
+        $data=Order_master::where('order_sn',$code)->select('shipping_tel','shipping_user','address','payment_money')->get();
+        if($data){
+            return json(40015,'查询成功',$data);
+        }else{
+            return json(40016,'查询失败');
         }
     }
 }
