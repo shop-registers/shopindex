@@ -14,6 +14,7 @@ use App\Models\Goods_sku;
 use App\Models\Users;
 use App\Models\Address;
 use App\Models\Order_detail;
+use App\Models\Nationwide_address;
 use Illuminate\Support\Facades\DB;
 
 class GoodinfoController extends Controller
@@ -25,11 +26,13 @@ class GoodinfoController extends Controller
     	$good_id=$request->input('good_id');
     	$res['good']=Goods::where('id',$good_id)->get()->toArray();
     	$res['attr']=Good_attr::where('good_id',$good_id)->get();
+        
     	foreach ($res['attr'] as $v) {
 		    $v->attr_desc=explode(',',$v->attr_desc);
 		}
     	$res['goodimg']=Goods_img::where('goods_id',$good_id)->select('img_src')->get()->toArray();
-
+        $res['address']=Nationwide_address::where('parentid','=',100000)->get();
+        
     	if(count($res['good'])!=0){
 			return json(40011,"查询成功",$res);
     	}else{
@@ -136,9 +139,29 @@ class GoodinfoController extends Controller
      */
     public function good_comment(Request $request){
     	$good_id=$request->input('goods_id');
-    	$comment=Comment::where('objectid',$good_id)->join('user','comment.userid=user.id')->get();
-    	if(isset($comment[0])){
-			return json(40011,"查询成功",$comment);
+    	$res['comment']=Comment::where('objectid',$good_id)->get();
+        $res['total']=count($res['comment']);
+        $res['good']=0;
+        $res['common']=0;
+        $res['gap']=0;
+        foreach ($res['comment'] as $v) {
+            switch ($v->classtype) {
+                case '1':
+                    $v="好评";
+                    $res['good']++;
+                    break;
+                case '2':
+                    $res['common']++;
+                    $v="中评";
+                    break;
+                case '3':
+                    $res['gap']++;
+                    $v="差评";
+                    break;
+            }
+        };
+    	if(isset($res['comment'][0])){
+			return json(40011,"查询成功",$res);
     	}else{
     		return json(40014,"查询失败");
     	}
