@@ -1,6 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
+<<<<<<< HEAD
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
@@ -121,6 +122,15 @@
             "time": "2019-02-26T18:08:30+00:00"
         },
         {
+=======
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "161508349635d65733323e73a2e16f78",
+    "content-hash": "36040d15acc60b360cc1e4b156515159",
+    "packages": [
+        {
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
             "source": {
@@ -132,7 +142,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/dnoegel/php-xdg-base-dir/zipball/265b8593498b997dc2d31e75b89f053b5cc9621a",
                 "reference": "265b8593498b997dc2d31e75b89f053b5cc9621a",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.3.2"
@@ -151,7 +171,11 @@
                 "MIT"
             ],
             "description": "implementation of xdg base directory specification for php",
+<<<<<<< HEAD
             "time": "2014-10-24T07:27:01+00:00"
+=======
+            "time": "2014-10-24 07:27:01"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "doctrine/inflector",
@@ -165,7 +189,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/inflector/zipball/5527a48b7313d15261292c149e55e26eae771b0a",
                 "reference": "5527a48b7313d15261292c149e55e26eae771b0a",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7.1"
@@ -218,7 +252,11 @@
                 "singularize",
                 "string"
             ],
+<<<<<<< HEAD
             "time": "2018-01-09T20:05:19+00:00"
+=======
+            "time": "2018-01-09 20:05:19"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "doctrine/lexer",
@@ -232,7 +270,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/lexer/zipball/1febd6c3ef84253d7c815bed85fc622ad207a9f8",
                 "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.3.2"
@@ -278,7 +326,11 @@
                 "parser",
                 "php"
             ],
+<<<<<<< HEAD
             "time": "2019-06-08T11:03:04+00:00"
+=======
+            "time": "2019-06-08 11:03:04"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "dragonmantank/cron-expression",
@@ -292,7 +344,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/dragonmantank/cron-expression/zipball/72b6fbf76adb3cf5bc0db68559b33d41219aba27",
                 "reference": "72b6fbf76adb3cf5bc0db68559b33d41219aba27",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7.0"
@@ -332,7 +394,11 @@
                 "cron",
                 "schedule"
             ],
+<<<<<<< HEAD
             "time": "2019-03-31T00:38:28+00:00"
+=======
+            "time": "2019-03-31 00:38:28"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "egulias/email-validator",
@@ -346,7 +412,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/c26463ff9241f27907112fbcd0c86fa670cfef98",
                 "reference": "c26463ff9241f27907112fbcd0c86fa670cfef98",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "doctrine/lexer": "^1.0.1",
@@ -389,7 +465,11 @@
                 "validation",
                 "validator"
             ],
+<<<<<<< HEAD
             "time": "2019-05-16T22:02:54+00:00"
+=======
+            "time": "2019-05-16 22:02:54"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "erusev/parsedown",
@@ -403,7 +483,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/erusev/parsedown/zipball/6d893938171a817f4e9bc9e86f2da1e370b7bcd7",
                 "reference": "6d893938171a817f4e9bc9e86f2da1e370b7bcd7",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "ext-mbstring": "*",
@@ -435,7 +525,11 @@
                 "markdown",
                 "parser"
             ],
+<<<<<<< HEAD
             "time": "2019-03-17T18:48:37+00:00"
+=======
+            "time": "2019-03-17 18:48:37"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "fideloper/proxy",
@@ -449,7 +543,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/fideloper/TrustedProxy/zipball/177c79a2d1f9970f89ee2fb4c12b429af38b6dfb",
                 "reference": "177c79a2d1f9970f89ee2fb4c12b429af38b6dfb",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "illuminate/contracts": "~5.0",
@@ -489,7 +593,11 @@
                 "proxy",
                 "trusted proxy"
             ],
+<<<<<<< HEAD
             "time": "2019-01-10T14:06:47+00:00"
+=======
+            "time": "2019-01-10 14:06:47"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -503,7 +611,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/guzzle/guzzle/zipball/407b0cb880ace85c9b63c5f9551db498cb2d50ba",
                 "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "guzzlehttp/promises": "^1.0",
@@ -554,7 +672,11 @@
                 "rest",
                 "web service"
             ],
+<<<<<<< HEAD
             "time": "2018-04-22T15:46:56+00:00"
+=======
+            "time": "2018-04-22 15:46:56"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "guzzlehttp/promises",
@@ -568,7 +690,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/guzzle/promises/zipball/a59da6cf61d80060647ff4d3eb2c03a2bc694646",
                 "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.5.0"
@@ -605,7 +737,11 @@
             "keywords": [
                 "promise"
             ],
+<<<<<<< HEAD
             "time": "2016-12-20T10:07:11+00:00"
+=======
+            "time": "2016-12-20 10:07:11"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "guzzlehttp/psr7",
@@ -619,7 +755,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/guzzle/psr7/zipball/9f83dded91781a01c63574e387eaa769be769115",
                 "reference": "9f83dded91781a01c63574e387eaa769be769115",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.4.0",
@@ -672,7 +818,11 @@
                 "uri",
                 "url"
             ],
+<<<<<<< HEAD
             "time": "2018-12-04T20:46:45+00:00"
+=======
+            "time": "2018-12-04 20:46:45"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -686,7 +836,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/JakubOnderka/PHP-Console-Color/zipball/d5deaecff52a0d61ccb613bb3804088da0307191",
                 "reference": "d5deaecff52a0d61ccb613bb3804088da0307191",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.4.0"
@@ -714,7 +874,11 @@
                     "email": "jakub.onderka@gmail.com"
                 }
             ],
+<<<<<<< HEAD
             "time": "2018-09-29T17:23:10+00:00"
+=======
+            "time": "2018-09-29 17:23:10"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "jakub-onderka/php-console-highlighter",
@@ -728,7 +892,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/JakubOnderka/PHP-Console-Highlighter/zipball/9f7a229a69d52506914b4bc61bfdb199d90c5547",
                 "reference": "9f7a229a69d52506914b4bc61bfdb199d90c5547",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "ext-tokenizer": "*",
@@ -760,7 +934,11 @@
                 }
             ],
             "description": "Highlight PHP code in terminal",
+<<<<<<< HEAD
             "time": "2018-09-29T18:48:56+00:00"
+=======
+            "time": "2018-09-29 18:48:56"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "jenssegers/mongodb",
@@ -774,7 +952,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/jenssegers/laravel-mongodb/zipball/58972584d1b5ea61101a9aaa80c84e22f19d1daa",
                 "reference": "58972584d1b5ea61101a9aaa80c84e22f19d1daa",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "illuminate/container": "^5.6",
@@ -829,7 +1017,11 @@
                 "mongo",
                 "mongodb"
             ],
+<<<<<<< HEAD
             "time": "2019-02-27T16:24:21+00:00"
+=======
+            "time": "2019-02-27 16:24:21"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "kylekatarnls/update-helper",
@@ -843,7 +1035,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/kylekatarnls/update-helper/zipball/b34a46d7f5ec1795b4a15ac9d46b884377262df9",
                 "reference": "b34a46d7f5ec1795b4a15ac9d46b884377262df9",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "composer-plugin-api": "^1.1.0",
@@ -874,7 +1076,11 @@
                 }
             ],
             "description": "Update helper",
+<<<<<<< HEAD
             "time": "2019-06-05T08:34:23+00:00"
+=======
+            "time": "2019-06-05 08:34:23"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "laravel/framework",
@@ -888,7 +1094,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/8e69728f1c80a024588adbd24c65c4fcf9aa9192",
                 "reference": "8e69728f1c80a024588adbd24c65c4fcf9aa9192",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "doctrine/inflector": "^1.1",
@@ -1020,7 +1236,11 @@
                 "framework",
                 "laravel"
             ],
+<<<<<<< HEAD
             "time": "2019-02-26T15:41:34+00:00"
+=======
+            "time": "2019-02-26 15:41:34"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "laravel/nexmo-notification-channel",
@@ -1034,7 +1254,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/nexmo-notification-channel/zipball/03edd42a55b306ff980c9950899d5a2b03260d48",
                 "reference": "03edd42a55b306ff980c9950899d5a2b03260d48",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "nexmo/client": "^1.0",
@@ -1077,7 +1307,11 @@
                 "nexmo",
                 "notifications"
             ],
+<<<<<<< HEAD
             "time": "2018-12-04T12:57:08+00:00"
+=======
+            "time": "2018-12-04 12:57:08"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "laravel/slack-notification-channel",
@@ -1091,7 +1325,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/slack-notification-channel/zipball/6e164293b754a95f246faf50ab2bbea3e4923cc9",
                 "reference": "6e164293b754a95f246faf50ab2bbea3e4923cc9",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.0",
@@ -1134,7 +1378,11 @@
                 "notifications",
                 "slack"
             ],
+<<<<<<< HEAD
             "time": "2018-12-12T13:12:06+00:00"
+=======
+            "time": "2018-12-12 13:12:06"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "laravel/tinker",
@@ -1148,7 +1396,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/tinker/zipball/cafbf598a90acde68985660e79b2b03c5609a405",
                 "reference": "cafbf598a90acde68985660e79b2b03c5609a405",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "illuminate/console": "~5.1",
@@ -1197,7 +1455,11 @@
                 "laravel",
                 "psysh"
             ],
+<<<<<<< HEAD
             "time": "2018-10-12T19:39:35+00:00"
+=======
+            "time": "2018-10-12 19:39:35"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "lcobucci/jwt",
@@ -1211,7 +1473,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/lcobucci/jwt/zipball/a11ec5f4b4d75d1fcd04e133dede4c317aac9e18",
                 "reference": "a11ec5f4b4d75d1fcd04e133dede4c317aac9e18",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "ext-mbstring": "*",
@@ -1252,7 +1524,11 @@
                 "JWS",
                 "jwt"
             ],
+<<<<<<< HEAD
             "time": "2019-05-24T18:30:49+00:00"
+=======
+            "time": "2019-05-24 18:30:49"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "league/flysystem",
@@ -1266,7 +1542,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f3e0d925c18b92cf3ce84ea5cc58d62a1762a2b2",
                 "reference": "f3e0d925c18b92cf3ce84ea5cc58d62a1762a2b2",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.5.9"
@@ -1336,7 +1622,11 @@
                 "sftp",
                 "storage"
             ],
+<<<<<<< HEAD
             "time": "2018-08-22T07:45:22+00:00"
+=======
+            "time": "2018-08-22 07:45:22"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "mongodb/mongodb",
@@ -1350,7 +1640,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/a307dd60e71e1291c60927ea4f3a1905146063f5",
                 "reference": "a307dd60e71e1291c60927ea4f3a1905146063f5",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "ext-mongodb": "^1.2.0",
@@ -1394,7 +1694,11 @@
                 "mongodb",
                 "persistence"
             ],
+<<<<<<< HEAD
             "time": "2017-02-16T18:40:32+00:00"
+=======
+            "time": "2017-02-16 18:40:32"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "monolog/monolog",
@@ -1408,7 +1712,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
                 "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.3.0",
@@ -1472,7 +1786,11 @@
                 "logging",
                 "psr-3"
             ],
+<<<<<<< HEAD
             "time": "2018-11-05T09:00:11+00:00"
+=======
+            "time": "2018-11-05 09:00:11"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "nesbot/carbon",
@@ -1486,7 +1804,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/8dd4172bfe1784952c4d58c4db725d183b1c23ad",
                 "reference": "8dd4172bfe1784952c4d58c4db725d183b1c23ad",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "kylekatarnls/update-helper": "^1.1",
@@ -1533,7 +1861,11 @@
                 "datetime",
                 "time"
             ],
+<<<<<<< HEAD
             "time": "2019-06-03T15:41:40+00:00"
+=======
+            "time": "2019-06-03 15:41:40"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "nexmo/client",
@@ -1547,7 +1879,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/Nexmo/nexmo-php/zipball/182d41a02ebd3e4be147baea45458ccfe2f528c4",
                 "reference": "182d41a02ebd3e4be147baea45458ccfe2f528c4",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "lcobucci/jwt": "^3.2",
@@ -1581,7 +1923,11 @@
                 }
             ],
             "description": "PHP Client for using Nexmo's API.",
+<<<<<<< HEAD
             "time": "2019-05-13T20:27:43+00:00"
+=======
+            "time": "2019-05-13 20:27:43"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "nikic/php-parser",
@@ -1595,7 +1941,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/1bd73cc04c3843ad8d6b0bfc0956026a151fc420",
                 "reference": "1bd73cc04c3843ad8d6b0bfc0956026a151fc420",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "ext-tokenizer": "*",
@@ -1632,7 +1988,11 @@
                 "parser",
                 "php"
             ],
+<<<<<<< HEAD
             "time": "2019-05-25T20:07:01+00:00"
+=======
+            "time": "2019-05-25 20:07:01"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "opis/closure",
@@ -1646,7 +2006,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/opis/closure/zipball/f846725591203098246276b2e7b9e8b7814c4965",
                 "reference": "f846725591203098246276b2e7b9e8b7814c4965",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^5.4 || ^7.0"
@@ -1693,7 +2063,11 @@
                 "serialization",
                 "serialize"
             ],
+<<<<<<< HEAD
             "time": "2019-05-31T20:04:32+00:00"
+=======
+            "time": "2019-05-31 20:04:32"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "paragonie/random_compat",
@@ -1707,7 +2081,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/paragonie/random_compat/zipball/84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
                 "reference": "84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7"
@@ -1738,7 +2122,11 @@
                 "pseudorandom",
                 "random"
             ],
+<<<<<<< HEAD
             "time": "2018-07-02T15:55:56+00:00"
+=======
+            "time": "2018-07-02 15:55:56"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "php-http/guzzle6-adapter",
@@ -1752,7 +2140,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/php-http/guzzle6-adapter/zipball/a56941f9dc6110409cfcddc91546ee97039277ab",
                 "reference": "a56941f9dc6110409cfcddc91546ee97039277ab",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.0",
@@ -1798,7 +2196,11 @@
                 "Guzzle",
                 "http"
             ],
+<<<<<<< HEAD
             "time": "2016-05-10T06:13:32+00:00"
+=======
+            "time": "2016-05-10 06:13:32"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "php-http/httplug",
@@ -1812,7 +2214,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/php-http/httplug/zipball/1c6381726c18579c4ca2ef1ec1498fdae8bdf018",
                 "reference": "1c6381726c18579c4ca2ef1ec1498fdae8bdf018",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.4",
@@ -1854,7 +2266,11 @@
                 "client",
                 "http"
             ],
+<<<<<<< HEAD
             "time": "2016-08-31T08:30:17+00:00"
+=======
+            "time": "2016-08-31 08:30:17"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "php-http/promise",
@@ -1868,7 +2284,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/php-http/promise/zipball/dc494cdc9d7160b9a09bd5573272195242ce7980",
                 "reference": "dc494cdc9d7160b9a09bd5573272195242ce7980",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require-dev": {
                 "henrikbjorn/phpspec-code-coverage": "^1.0",
@@ -1904,7 +2330,11 @@
             "keywords": [
                 "promise"
             ],
+<<<<<<< HEAD
             "time": "2016-01-26T13:27:02+00:00"
+=======
+            "time": "2016-01-26 13:27:02"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "psr/container",
@@ -1918,7 +2348,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
                 "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.3.0"
@@ -1953,7 +2393,11 @@
                 "container-interop",
                 "psr"
             ],
+<<<<<<< HEAD
             "time": "2017-02-14T16:28:37+00:00"
+=======
+            "time": "2017-02-14 16:28:37"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "psr/http-factory",
@@ -1967,7 +2411,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/php-fig/http-factory/zipball/12ac7fcd07e5b077433f5f2bee95b3a771bf61be",
                 "reference": "12ac7fcd07e5b077433f5f2bee95b3a771bf61be",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=7.0.0",
@@ -2005,7 +2459,11 @@
                 "request",
                 "response"
             ],
+<<<<<<< HEAD
             "time": "2019-04-30T12:38:16+00:00"
+=======
+            "time": "2019-04-30 12:38:16"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "psr/http-message",
@@ -2019,7 +2477,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
                 "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.3.0"
@@ -2055,7 +2523,11 @@
                 "request",
                 "response"
             ],
+<<<<<<< HEAD
             "time": "2016-08-06T14:39:51+00:00"
+=======
+            "time": "2016-08-06 14:39:51"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "psr/log",
@@ -2069,7 +2541,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
                 "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.3.0"
@@ -2102,7 +2584,11 @@
                 "psr",
                 "psr-3"
             ],
+<<<<<<< HEAD
             "time": "2018-11-20T15:27:04+00:00"
+=======
+            "time": "2018-11-20 15:27:04"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "psr/simple-cache",
@@ -2116,7 +2602,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
                 "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.3.0"
@@ -2150,7 +2646,11 @@
                 "psr-16",
                 "simple-cache"
             ],
+<<<<<<< HEAD
             "time": "2017-10-23T01:57:42+00:00"
+=======
+            "time": "2017-10-23 01:57:42"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "psy/psysh",
@@ -2164,7 +2664,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/bobthecow/psysh/zipball/9aaf29575bb8293206bb0420c1e1c87ff2ffa94e",
                 "reference": "9aaf29575bb8293206bb0420c1e1c87ff2ffa94e",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "dnoegel/php-xdg-base-dir": "0.1",
@@ -2224,7 +2734,11 @@
                 "interactive",
                 "shell"
             ],
+<<<<<<< HEAD
             "time": "2018-10-13T15:16:03+00:00"
+=======
+            "time": "2018-10-13 15:16:03"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "ralouphie/getallheaders",
@@ -2238,7 +2752,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
                 "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.3"
@@ -2264,7 +2788,11 @@
                 }
             ],
             "description": "A polyfill for getallheaders.",
+<<<<<<< HEAD
             "time": "2016-02-11T07:05:27+00:00"
+=======
+            "time": "2016-02-11 07:05:27"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "ramsey/uuid",
@@ -2278,7 +2806,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/ramsey/uuid/zipball/d09ea80159c1929d75b3f9c60504d613aeb4a1e3",
                 "reference": "d09ea80159c1929d75b3f9c60504d613aeb4a1e3",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "paragonie/random_compat": "^1.0|^2.0|9.99.99",
@@ -2346,7 +2884,11 @@
                 "identifier",
                 "uuid"
             ],
+<<<<<<< HEAD
             "time": "2018-07-19T23:38:55+00:00"
+=======
+            "time": "2018-07-19 23:38:55"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2360,7 +2902,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/5397cd05b0a0f7937c47b0adcb4c60e5ab936b6a",
                 "reference": "5397cd05b0a0f7937c47b0adcb4c60e5ab936b6a",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "egulias/email-validator": "~2.0",
@@ -2408,7 +2960,11 @@
                 "mail",
                 "mailer"
             ],
+<<<<<<< HEAD
             "time": "2019-04-21T09:21:45+00:00"
+=======
+            "time": "2019-04-21 09:21:45"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/console",
@@ -2422,7 +2978,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/console/zipball/d50bbeeb0e17e6dd4124ea391eff235e932cbf64",
                 "reference": "d50bbeeb0e17e6dd4124ea391eff235e932cbf64",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7.1.3",
@@ -2483,7 +3049,11 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2019-06-05T13:25:51+00:00"
+=======
+            "time": "2019-06-05 13:25:51"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/css-selector",
@@ -2497,7 +3067,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/css-selector/zipball/105c98bb0c5d8635bea056135304bd8edcc42b4d",
                 "reference": "105c98bb0c5d8635bea056135304bd8edcc42b4d",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7.1.3"
@@ -2536,7 +3116,11 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2019-01-16T21:53:39+00:00"
+=======
+            "time": "2019-01-16 21:53:39"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/debug",
@@ -2550,7 +3134,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/debug/zipball/4e025104f1f9adb1f7a2d14fb102c9986d6e97c6",
                 "reference": "4e025104f1f9adb1f7a2d14fb102c9986d6e97c6",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7.1.3",
@@ -2592,7 +3186,11 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2019-05-30T16:10:05+00:00"
+=======
+            "time": "2019-05-30 16:10:05"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/event-dispatcher",
@@ -2606,7 +3204,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/4e6c670af81c4fb0b6c08b035530a9915d0b691f",
                 "reference": "4e6c670af81c4fb0b6c08b035530a9915d0b691f",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7.1.3",
@@ -2662,7 +3270,11 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2019-05-30T16:10:05+00:00"
+=======
+            "time": "2019-05-30 16:10:05"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/event-dispatcher-contracts",
@@ -2676,7 +3288,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/8fa2cf2177083dd59cf8e44ea4b6541764fbda69",
                 "reference": "8fa2cf2177083dd59cf8e44ea4b6541764fbda69",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7.1.3"
@@ -2720,7 +3342,11 @@
                 "interoperability",
                 "standards"
             ],
+<<<<<<< HEAD
             "time": "2019-05-22T12:23:29+00:00"
+=======
+            "time": "2019-05-22 12:23:29"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/finder",
@@ -2734,7 +3360,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/finder/zipball/b3d4f4c0e4eadfdd8b296af9ca637cfbf51d8176",
                 "reference": "b3d4f4c0e4eadfdd8b296af9ca637cfbf51d8176",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7.1.3"
@@ -2769,7 +3405,11 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2019-05-26T20:47:49+00:00"
+=======
+            "time": "2019-05-26 20:47:49"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/http-foundation",
@@ -2783,7 +3423,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-foundation/zipball/b7e4945dd9b277cd24e93566e4da0a87956392a9",
                 "reference": "b7e4945dd9b277cd24e93566e4da0a87956392a9",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7.1.3",
@@ -2824,7 +3474,11 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2019-06-06T10:05:02+00:00"
+=======
+            "time": "2019-06-06 10:05:02"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/http-kernel",
@@ -2838,7 +3492,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-kernel/zipball/738ad561cd6a8d1c44ee1da941b2e628e264c429",
                 "reference": "738ad561cd6a8d1c44ee1da941b2e628e264c429",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7.1.3",
@@ -2916,7 +3580,11 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2019-06-06T13:23:34+00:00"
+=======
+            "time": "2019-06-06 13:23:34"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/mime",
@@ -2930,7 +3598,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/mime/zipball/ec2c5565de60e03f33d4296a655e3273f0ad1f8b",
                 "reference": "ec2c5565de60e03f33d4296a655e3273f0ad1f8b",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7.1.3",
@@ -2975,7 +3653,11 @@
                 "mime",
                 "mime-type"
             ],
+<<<<<<< HEAD
             "time": "2019-06-04T09:22:54+00:00"
+=======
+            "time": "2019-06-04 09:22:54"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -2989,7 +3671,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/82ebae02209c21113908c229e9883c419720738a",
                 "reference": "82ebae02209c21113908c229e9883c419720738a",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.3.3"
@@ -3033,7 +3725,11 @@
                 "polyfill",
                 "portable"
             ],
+<<<<<<< HEAD
             "time": "2019-02-06T07:57:58+00:00"
+=======
+            "time": "2019-02-06 07:57:58"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/polyfill-iconv",
@@ -3047,7 +3743,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-iconv/zipball/f037ea22acfaee983e271dd9c3b8bb4150bd8ad7",
                 "reference": "f037ea22acfaee983e271dd9c3b8bb4150bd8ad7",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.3.3"
@@ -3092,7 +3798,11 @@
                 "portable",
                 "shim"
             ],
+<<<<<<< HEAD
             "time": "2019-02-06T07:57:58+00:00"
+=======
+            "time": "2019-02-06 07:57:58"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/polyfill-intl-idn",
@@ -3106,7 +3816,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/c766e95bec706cdd89903b1eda8afab7d7a6b7af",
                 "reference": "c766e95bec706cdd89903b1eda8afab7d7a6b7af",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.3.3",
@@ -3154,7 +3874,11 @@
                 "portable",
                 "shim"
             ],
+<<<<<<< HEAD
             "time": "2019-03-04T13:44:35+00:00"
+=======
+            "time": "2019-03-04 13:44:35"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -3168,7 +3892,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fe5e94c604826c35a32fa832f35bd036b6799609",
                 "reference": "fe5e94c604826c35a32fa832f35bd036b6799609",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.3.3"
@@ -3213,7 +3947,11 @@
                 "portable",
                 "shim"
             ],
+<<<<<<< HEAD
             "time": "2019-02-06T07:57:58+00:00"
+=======
+            "time": "2019-02-06 07:57:58"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/polyfill-php72",
@@ -3227,7 +3965,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/ab50dcf166d5f577978419edd37aa2bb8eabce0c",
                 "reference": "ab50dcf166d5f577978419edd37aa2bb8eabce0c",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.3.3"
@@ -3268,7 +4016,11 @@
                 "portable",
                 "shim"
             ],
+<<<<<<< HEAD
             "time": "2019-02-06T07:57:58+00:00"
+=======
+            "time": "2019-02-06 07:57:58"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/polyfill-php73",
@@ -3282,7 +4034,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/d1fb4abcc0c47be136208ad9d68bf59f1ee17abd",
                 "reference": "d1fb4abcc0c47be136208ad9d68bf59f1ee17abd",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.3.3"
@@ -3326,7 +4088,11 @@
                 "portable",
                 "shim"
             ],
+<<<<<<< HEAD
             "time": "2019-02-06T07:57:58+00:00"
+=======
+            "time": "2019-02-06 07:57:58"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/process",
@@ -3340,7 +4106,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/process/zipball/856d35814cf287480465bb7a6c413bb7f5f5e69c",
                 "reference": "856d35814cf287480465bb7a6c413bb7f5f5e69c",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7.1.3"
@@ -3375,7 +4151,11 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2019-05-30T16:10:05+00:00"
+=======
+            "time": "2019-05-30 16:10:05"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/routing",
@@ -3389,7 +4169,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/routing/zipball/9b31cd24f6ad2cebde6845f6daa9c6d69efe2465",
                 "reference": "9b31cd24f6ad2cebde6845f6daa9c6d69efe2465",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7.1.3"
@@ -3451,7 +4241,11 @@
                 "uri",
                 "url"
             ],
+<<<<<<< HEAD
             "time": "2019-06-05T09:16:20+00:00"
+=======
+            "time": "2019-06-05 09:16:20"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/service-contracts",
@@ -3465,7 +4259,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/service-contracts/zipball/191afdcb5804db960d26d8566b7e9a2843cab3a0",
                 "reference": "191afdcb5804db960d26d8566b7e9a2843cab3a0",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7.1.3"
@@ -3509,7 +4313,11 @@
                 "interoperability",
                 "standards"
             ],
+<<<<<<< HEAD
             "time": "2019-05-28T07:50:59+00:00"
+=======
+            "time": "2019-05-28 07:50:59"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/translation",
@@ -3523,7 +4331,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/translation/zipball/5dda505e5f65d759741dfaf4e54b36010a4b57aa",
                 "reference": "5dda505e5f65d759741dfaf4e54b36010a4b57aa",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7.1.3",
@@ -3585,7 +4403,11 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2019-06-03T20:27:40+00:00"
+=======
+            "time": "2019-06-03 20:27:40"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/translation-contracts",
@@ -3599,7 +4421,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/93597ce975d91c52ebfaca1253343cd9ccb7916d",
                 "reference": "93597ce975d91c52ebfaca1253343cd9ccb7916d",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7.1.3"
@@ -3642,7 +4474,11 @@
                 "interoperability",
                 "standards"
             ],
+<<<<<<< HEAD
             "time": "2019-05-27T08:16:38+00:00"
+=======
+            "time": "2019-05-27 08:16:38"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "symfony/var-dumper",
@@ -3656,7 +4492,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/var-dumper/zipball/f974f448154928d2b5fb7c412bd23b81d063f34b",
                 "reference": "f974f448154928d2b5fb7c412bd23b81d063f34b",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7.1.3",
@@ -3718,7 +4564,11 @@
                 "debug",
                 "dump"
             ],
+<<<<<<< HEAD
             "time": "2019-06-05T02:08:12+00:00"
+=======
+            "time": "2019-06-05 02:08:12"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -3732,7 +4582,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/0ed4a2ea4e0902dac0489e6436ebcd5bbcae9757",
                 "reference": "0ed4a2ea4e0902dac0489e6436ebcd5bbcae9757",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^5.5 || ^7.0",
@@ -3765,7 +4625,11 @@
             ],
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
+<<<<<<< HEAD
             "time": "2017-11-27T11:13:29+00:00"
+=======
+            "time": "2017-11-27 11:13:29"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "vlucas/phpdotenv",
@@ -3779,7 +4643,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/2a7dcf7e3e02dc5e701004e51a6f304b713107d5",
                 "reference": "2a7dcf7e3e02dc5e701004e51a6f304b713107d5",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": ">=5.3.9",
@@ -3816,7 +4690,11 @@
                 "env",
                 "environment"
             ],
+<<<<<<< HEAD
             "time": "2019-01-29T11:11:52+00:00"
+=======
+            "time": "2019-01-29 11:11:52"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "zendframework/zend-diactoros",
@@ -3830,7 +4708,17 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/37bf68b428850ee26ed7c3be6c26236dd95a95f1",
                 "reference": "37bf68b428850ee26ed7c3be6c26236dd95a95f1",
+<<<<<<< HEAD
                 "shasum": ""
+=======
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
             },
             "require": {
                 "php": "^7.1",
@@ -3882,7 +4770,11 @@
                 "psr",
                 "psr-7"
             ],
+<<<<<<< HEAD
             "time": "2019-04-29T21:11:00+00:00"
+=======
+            "time": "2019-04-29 21:11:00"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         }
     ],
     "packages-dev": [
@@ -3951,7 +4843,11 @@
                 "beyondcode",
                 "laravel-dump-server"
             ],
+<<<<<<< HEAD
             "time": "2018-10-04T07:22:24+00:00"
+=======
+            "time": "2018-10-04 07:22:24"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "doctrine/instantiator",
@@ -4013,7 +4909,11 @@
                 "constructor",
                 "instantiate"
             ],
+<<<<<<< HEAD
             "time": "2019-03-17T17:37:11+00:00"
+=======
+            "time": "2019-03-17 17:37:11"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "filp/whoops",
@@ -4080,7 +4980,11 @@
                 "throwable",
                 "whoops"
             ],
+<<<<<<< HEAD
             "time": "2018-10-23T09:00:00+00:00"
+=======
+            "time": "2018-10-23 09:00:00"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "fzaninotto/faker",
@@ -4136,7 +5040,11 @@
                 "faker",
                 "fixtures"
             ],
+<<<<<<< HEAD
             "time": "2018-07-12T10:23:15+00:00"
+=======
+            "time": "2018-07-12 10:23:15"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -4190,7 +5098,11 @@
             "keywords": [
                 "test"
             ],
+<<<<<<< HEAD
             "time": "2016-01-20T08:20:44+00:00"
+=======
+            "time": "2016-01-20 08:20:44"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "mockery/mockery",
@@ -4261,7 +5173,11 @@
                 "test double",
                 "testing"
             ],
+<<<<<<< HEAD
             "time": "2019-02-13T09:37:52+00:00"
+=======
+            "time": "2019-02-13 09:37:52"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "myclabs/deep-copy",
@@ -4315,7 +5231,11 @@
                 "object",
                 "object graph"
             ],
+<<<<<<< HEAD
             "time": "2019-04-07T13:18:21+00:00"
+=======
+            "time": "2019-04-07 13:18:21"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "nunomaduro/collision",
@@ -4385,7 +5305,11 @@
                 "php",
                 "symfony"
             ],
+<<<<<<< HEAD
             "time": "2018-11-21T21:40:54+00:00"
+=======
+            "time": "2018-11-21 21:40:54"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "phar-io/manifest",
@@ -4446,7 +5370,11 @@
                 }
             ],
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
+<<<<<<< HEAD
             "time": "2018-07-08T19:23:20+00:00"
+=======
+            "time": "2018-07-08 19:23:20"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "phar-io/version",
@@ -4499,7 +5427,11 @@
                 }
             ],
             "description": "Library for handling version information and constraints",
+<<<<<<< HEAD
             "time": "2018-07-08T19:19:57+00:00"
+=======
+            "time": "2018-07-08 19:19:57"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -4559,7 +5491,11 @@
                 "reflection",
                 "static analysis"
             ],
+<<<<<<< HEAD
             "time": "2017-09-11T18:02:19+00:00"
+=======
+            "time": "2017-09-11 18:02:19"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -4616,7 +5552,11 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
+<<<<<<< HEAD
             "time": "2019-04-30T17:48:53+00:00"
+=======
+            "time": "2019-04-30 17:48:53"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -4669,7 +5609,11 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
+<<<<<<< HEAD
             "time": "2017-07-14T14:27:02+00:00"
+=======
+            "time": "2017-07-14 14:27:02"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "phpspec/prophecy",
@@ -4738,7 +5682,11 @@
                 "spy",
                 "stub"
             ],
+<<<<<<< HEAD
             "time": "2019-06-13T12:50:23+00:00"
+=======
+            "time": "2019-06-13 12:50:23"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -4807,7 +5755,11 @@
                 "testing",
                 "xunit"
             ],
+<<<<<<< HEAD
             "time": "2018-10-31T16:06:48+00:00"
+=======
+            "time": "2018-10-31 16:06:48"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -4863,7 +5815,11 @@
                 "filesystem",
                 "iterator"
             ],
+<<<<<<< HEAD
             "time": "2018-09-13T20:33:42+00:00"
+=======
+            "time": "2018-09-13 20:33:42"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "phpunit/php-text-template",
@@ -4910,7 +5866,11 @@
             "keywords": [
                 "template"
             ],
+<<<<<<< HEAD
             "time": "2015-06-21T13:50:34+00:00"
+=======
+            "time": "2015-06-21 13:50:34"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "phpunit/php-timer",
@@ -4965,7 +5925,11 @@
             "keywords": [
                 "timer"
             ],
+<<<<<<< HEAD
             "time": "2019-06-07T04:22:29+00:00"
+=======
+            "time": "2019-06-07 04:22:29"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "phpunit/php-token-stream",
@@ -5020,7 +5984,11 @@
             "keywords": [
                 "tokenizer"
             ],
+<<<<<<< HEAD
             "time": "2018-10-30T05:52:18+00:00"
+=======
+            "time": "2018-10-30 05:52:18"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "phpunit/phpunit",
@@ -5110,7 +6078,11 @@
                 "testing",
                 "xunit"
             ],
+<<<<<<< HEAD
             "time": "2019-05-28T11:59:40+00:00"
+=======
+            "time": "2019-05-28 11:59:40"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -5161,7 +6133,11 @@
             ],
             "description": "Looks up which function or method a line of code belongs to",
             "homepage": "https://github.com/sebastianbergmann/code-unit-reverse-lookup/",
+<<<<<<< HEAD
             "time": "2017-03-04T06:30:41+00:00"
+=======
+            "time": "2017-03-04 06:30:41"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "sebastian/comparator",
@@ -5231,7 +6207,11 @@
                 "compare",
                 "equality"
             ],
+<<<<<<< HEAD
             "time": "2018-07-12T15:12:46+00:00"
+=======
+            "time": "2018-07-12 15:12:46"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "sebastian/diff",
@@ -5293,7 +6273,11 @@
                 "unidiff",
                 "unified diff"
             ],
+<<<<<<< HEAD
             "time": "2019-02-04T06:01:07+00:00"
+=======
+            "time": "2019-02-04 06:01:07"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "sebastian/environment",
@@ -5352,7 +6336,11 @@
                 "environment",
                 "hhvm"
             ],
+<<<<<<< HEAD
             "time": "2019-05-05T09:05:15+00:00"
+=======
+            "time": "2019-05-05 09:05:15"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "sebastian/exporter",
@@ -5425,7 +6413,11 @@
                 "export",
                 "exporter"
             ],
+<<<<<<< HEAD
             "time": "2017-04-03T13:19:02+00:00"
+=======
+            "time": "2017-04-03 13:19:02"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "sebastian/global-state",
@@ -5482,7 +6474,11 @@
             "keywords": [
                 "global state"
             ],
+<<<<<<< HEAD
             "time": "2017-04-27T15:39:26+00:00"
+=======
+            "time": "2017-04-27 15:39:26"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "sebastian/object-enumerator",
@@ -5535,7 +6531,11 @@
             ],
             "description": "Traverses array structures and object graphs to enumerate all referenced objects",
             "homepage": "https://github.com/sebastianbergmann/object-enumerator/",
+<<<<<<< HEAD
             "time": "2017-08-03T12:35:26+00:00"
+=======
+            "time": "2017-08-03 12:35:26"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "sebastian/object-reflector",
@@ -5586,7 +6586,11 @@
             ],
             "description": "Allows reflection of object attributes, including inherited and non-public ones",
             "homepage": "https://github.com/sebastianbergmann/object-reflector/",
+<<<<<<< HEAD
             "time": "2017-03-29T09:07:27+00:00"
+=======
+            "time": "2017-03-29 09:07:27"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "sebastian/recursion-context",
@@ -5645,7 +6649,11 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
+<<<<<<< HEAD
             "time": "2017-03-03T06:23:57+00:00"
+=======
+            "time": "2017-03-03 06:23:57"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "sebastian/resource-operations",
@@ -5693,7 +6701,11 @@
             ],
             "description": "Provides a list of PHP built-in functions that operate on resources",
             "homepage": "https://www.github.com/sebastianbergmann/resource-operations",
+<<<<<<< HEAD
             "time": "2018-10-04T04:07:39+00:00"
+=======
+            "time": "2018-10-04 04:07:39"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "sebastian/version",
@@ -5742,7 +6754,11 @@
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
+<<<<<<< HEAD
             "time": "2016-10-03T07:35:21+00:00"
+=======
+            "time": "2016-10-03 07:35:21"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "theseer/tokenizer",
@@ -5788,7 +6804,11 @@
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
+<<<<<<< HEAD
             "time": "2019-06-13T22:48:21+00:00"
+=======
+            "time": "2019-06-13 22:48:21"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         },
         {
             "name": "webmozart/assert",
@@ -5845,7 +6865,11 @@
                 "check",
                 "validate"
             ],
+<<<<<<< HEAD
             "time": "2018-12-25T11:19:39+00:00"
+=======
+            "time": "2018-12-25 11:19:39"
+>>>>>>> edda54c451b85b447dc90239100aec97fd197774
         }
     ],
     "aliases": [],
