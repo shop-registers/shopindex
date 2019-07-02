@@ -37,7 +37,7 @@ class FullOrderController extends Controller
     	$data = $request->all();
     	if(!empty($data['customer_id']) )
     	{
-    		$data = Order::where([['customer_id','=',$data['customer_id']] ,['order_status','=',$data['order_status']] ])->select()->get()->toArray();
+    		$data = Order::where([['customer_id','=',$data['customer_id']] ,['order_status','=',3] ])->select()->get()->toArray();
     		if($data)
     		{
     			return response()->json([Response::HTTP_OK,'msg'=>'查询订单成功','data'=>$data]);
@@ -58,7 +58,7 @@ class FullOrderController extends Controller
     	$data = $request->all();
     	if(!empty($data['customer_id']) )
     	{
-    		$data = Order::where([['customer_id','=',$data['customer_id']] ,['order_status','=',$data['order_status']] ])->select()->get()->toArray();
+    		$data = Order::where([['customer_id','=',$data['customer_id']] ,['order_status','=',1] ])->select()->get()->toArray();
     		if($data)
     		{
     			return response()->json([Response::HTTP_OK,'msg'=>'查询订单成功','data'=>$data]);
@@ -79,7 +79,7 @@ class FullOrderController extends Controller
     	$data = $request->all();
     	if(!empty($data['customer_id']) )
     	{
-    		$data = Order::where([['customer_id','=',$data['customer_id']] ,['order_status','=',$data['order_status']] ])->select()->get()->toArray();
+    		$data = Order::where([['customer_id','=',$data['customer_id']] ,['order_status','=',0] ])->select()->get()->toArray();
     		if($data)
     		{
     			return response()->json([Response::HTTP_OK,'msg'=>'查询订单成功','data'=>$data]);

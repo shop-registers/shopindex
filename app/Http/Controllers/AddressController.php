@@ -38,18 +38,17 @@ class AddressController extends Controller
  	//添加收货地址接口
  	public function AddAddress(Request $request)
  	{
- 		if($request->all())
- 		{
  			$data = $request->all();
- 			if($info = Address::insert($data))
+ 			$info =Address::insert($data);
+ 			if($info)
  			{
  				return response()->json(['info'=>$info,Response::HTTP_OK,'msg'=>'添加成功']);
  			}
- 		}
- 		else
- 		{
- 			return response()->json([Response::HTTP_NOT_FOUND,'msg'=>'添加失败']);
- 		}
+ 			else
+	 		{
+	 			return response()->json([Response::HTTP_NOT_FOUND,'msg'=>'添加失败']);
+	 		}
+ 		
  	}
  	//地址删除接口
  	public function DelAddress(Request $request)
