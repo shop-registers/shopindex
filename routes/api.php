@@ -25,8 +25,8 @@ Route::group(['prefix'=>'/'],function(){
 
 Route::get('/good_comment','GoodinfoController@good_comment');//商品评论内容
 Route::get('/add_collect','GoodinfoController@add_collect');//添加收藏
-Route::get('/add_shopcart','GoodinfoController@add_shopcart');//添加到购物车
-Route::get('/add_order','GoodinfoController@add_order');//确认下单
+Route::post('/add_shopcart','GoodinfoController@add_shopcart');//添加到购物车
+Route::post('/add_order','GoodinfoController@add_order');//确认下单
 Route::get('/goodattr_change','GoodinfoController@goodattr_change');//ajax改变商品价格
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
@@ -93,3 +93,10 @@ Route::get('/integral/{id}','Shop_apiController@integral')->middleware('token');
 
 //分组
 // Route::group('/login','Shop_apiController@reset_pwd');
+
+Route::get('/payorder','GoodinfoController@payorder');//支付订单页面展示数据
+Route::post('/payment_success','GoodinfoController@payment_success');//支付订单
+Route::get('/set_defaule_address','GoodinfoController@set_defaule_address');//更改默认地址
+Route::get('/del_address','GoodinfoController@del_address');//删除地址
+Route::get('/get_success','GoodinfoController@get_success');//删除地址
+

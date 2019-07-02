@@ -8,4 +8,5 @@ class Order_master extends Model
 {
     //
     protected $table="order_master";
+    public $timestamps = false;
 }

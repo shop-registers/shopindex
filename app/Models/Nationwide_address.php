@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Goods_sku extends Model
+class Nationwide_address extends Model
 {
     //
-    protected $table="goods_sku";
+    protected $table="nationwide_address";
     public $timestamps = false;
 }
