@@ -16,6 +16,7 @@ use App\Models\Address;
 use App\Models\Order_detail;
 use App\Models\Nationwide_address;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Response;
 
 class GoodinfoController extends Controller
 {
@@ -34,9 +35,9 @@ class GoodinfoController extends Controller
         $res['address']=Nationwide_address::where('parentid','=',100000)->get();
         
     	if(count($res['good'])!=0){
-			return json(40011,"查询成功",$res);
+			return Response()->json(['code'=>40011,'msg'=>"查询成功",'data'=>$res]);
     	}else{
-    		return json(40014,"查询失败");
+    		return Response()->json(['code'=>40014,'msg'=>"查询失败"]);
     	}
     }
     /**
@@ -48,9 +49,9 @@ class GoodinfoController extends Controller
 		$data['addtime']=time();
 		$res=Collect::insert($data);
 		if($res){
-			return json(40012,"添加收藏成功");
+			return Response()->json(['code'=>40012,'msg'=>"添加收藏成功"]);
 		}else{
-			return json(40013,"添加收藏失败");
+			return Response()->json(['code'=>40013,'msg'=>"添加收藏失败"]);
 		}
     }
     /**
@@ -69,9 +70,9 @@ class GoodinfoController extends Controller
         $data['addtime']=time();
 		$res=Shopcart::insert($data);
 		if($res){
-			return json(40012,"添加购物车成功");
+			return Response()->json(['code'=>40012,'msg'=>"添加购物车成功"]);
 		}else{
-			return json(40013,"添加购物车失败");
+			return Response()->json(['code'=>40013,'msg'=>"添加购物车失败"]);
 		}
     }
     /**
@@ -93,7 +94,7 @@ class GoodinfoController extends Controller
         $data['create_time']=date('Y-m-d H:i:s',time());//时间
         $res=Order_master::insertGetId($data);
         if(!$res){
-            return json(40016,"添加订单失败");return;
+            return Response()->json(['code'=>40016,'msg'=>"添加订单失败"]);return;
         }
         $arr['order_id']=$res;
         $arr['product_id']=$data['goods_id'];
@@ -105,9 +106,9 @@ class GoodinfoController extends Controller
         $result=Order_detail::insertGetId($arr);
 		if($result){
             $last=base64_encode("order_sn=".$data['order_sn']."&id=".$res);//总的订单号和主订单的ID
-			return json(40015,"添加订单成功",$last);
+			return Response()->json(['code'=>40015,'msg'=>"添加订单成功",'data'=>$last]);
 		}else{
-			return json(40016,"添加订单失败");
+			return Response()->json(['code'=>40016,'msg'=>"添加订单失败"]);
 		}
     }
     /**
@@ -117,9 +118,9 @@ class GoodinfoController extends Controller
     	
     	$res=Goods::where('type_id',$id)->get();
     	if(isset($res[0])){
-            return json(40011,"查询成功",$res);
+            return Response()->json(['code'=>40011,'msg'=>"查询成功",'data'=>$res]);
         }else{
-            return json(40014,"查询失败");
+            return Response()->json(['code'=>40014,'msg'=>"查询失败"]);
         }
     }
     /**
@@ -129,9 +130,9 @@ class GoodinfoController extends Controller
     	$attr=$request->input('str');
     	$attrinfo=Goods_sku::where('sku_desc',"$attr")->select('sku_id','price','inventory')->get();
     	if(isset($attrinfo[0])){
-            return json(40011,"查询成功",$attrinfo);
+            return Response()->json(['code'=>40011,'code'=>"查询成功",'data'=>$attrinfo]);
         }else{
-            return json(40014,"查询失败");
+            return Response()->json(['code'=>40014,'msg'=>"查询失败"]);
         }
     }
     /**
@@ -161,9 +162,9 @@ class GoodinfoController extends Controller
             }
         };
     	if(isset($res['comment'][0])){
-			return json(40011,"查询成功",$res);
+			return Response()->json(['code'=>40011,'msg'=>"查询成功",'data'=>$res]);
     	}else{
-    		return json(40014,"查询失败");
+    		return Response()->json(['code'=>40014,'msg'=>"查询失败"]);
     	}
     }
     public function payorder(Request $request){
@@ -182,9 +183,9 @@ class GoodinfoController extends Controller
         $res['address']=Address::where('u_id',$user_id)->get();
         $res['order_sn']=$arr['order_sn'];
         if(count($res['orderinfo'])!=0){
-            return json(40011,"查询成功",$res);
+            return Response()->json(['code'=>40011,'msg'=>"查询成功",'data'=>$res]);
         }else{
-            return json(40014,"查询失败");
+            return Response()->json(['code'=>40014,'msg'=>"查询失败"]);
         }
     }
     public function payment_success(Request $request){
@@ -229,9 +230,9 @@ class GoodinfoController extends Controller
                 
             });
             if($res==null){
-                return json(40015,"支付成功",$order_sn);
+                return Response()->json(['code'=>40015,'msg'=>"支付成功",'data'=>$order_sn]);
             }else{
-                return json(40016,"支付失败");
+                return Response()->json(['code'=>40016,'msg'=>"支付失败"]);
             }
         }
         
@@ -240,9 +241,9 @@ class GoodinfoController extends Controller
         $id=$request->input('id');
         $res=Address::where('address_id',$id)->delete();
         if($res){
-            json(40017,"删除成功");
+            return Response()->json(['code'=>40017,'msg'=>"删除成功"]);
         }else{
-            json(40018,"删除失败");
+            return Response()->json(['code'=>40018,'msg'=>"删除失败"]);
         }
     }
     public function set_defaule_address(Request $request){
@@ -253,18 +254,18 @@ class GoodinfoController extends Controller
             Address::where('address_id',$id)->update(['default'=>1]);
         });
         if($res){
-            return json(40019,"更改成功");
+            return Response()->json(['code'=>40019,'msg'=>"更改成功"]);
         }else{
-            return json(40020,"更改失败");
+            return Response()->json(['code'=>40020,'msg'=>"更改失败"]);
         }
     }
     public function get_success(Request $request){
         $code=$request->input('code');
         $data=Order_master::where('order_sn',$code)->select('shipping_tel','shipping_user','address','payment_money')->get();
         if($data){
-            return json(40015,'查询成功',$data);
+            return Response()->json(['code'=>40015,'msg'=>'查询成功','data'=>$data]);
         }else{
-            return json(40016,'查询失败');
+            return Response()->json(['code'=>40016,'msg'=>'查询失败']);
         }
     }
 }
