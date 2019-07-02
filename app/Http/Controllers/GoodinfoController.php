@@ -17,14 +17,14 @@ class GoodinfoController extends Controller
     /**
      * 商品的详情页展示 
      */
-    public function good_showinfo(Request $request){
-    	$good_id=$request->input('good_id');
-    	$res['good']=Goods::where('id',$good_id)->get()->toArray();
-    	$res['attr']=Good_attr::where('good_id',$good_id)->get();
+    public function good_showinfo(Request $request,$id=null){
+    	
+    	$res['good']=Goods::where('id',$id)->get()->toArray();
+    	$res['attr']=Good_attr::where('good_id',$id)->get();
     	foreach ($res['attr'] as $v) {
 		    $v->attr_desc=explode(',',$v->attr_desc);
 		}
-    	$res['goodimg']=Goods_img::where('goods_id',$good_id)->select('img_src')->get()->toArray();
+    	$res['goodimg']=Goods_img::where('goods_id',$id)->select('img_src')->get()->toArray();
 
     	if(count($res['good'])!=0){
 			json(40011,"查询成功",$res);
