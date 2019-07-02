@@ -77,31 +77,34 @@ class GoodinfoController extends Controller
     /**
      * 生成订单号
      */
-    public function create_order_code($goods_id,$user_id){
-    	$code=date('YmdHis',time()).$goods_id.$user_id.rand(1111,9999);
-    	return $code;
+    public function create_order_code($user_id,$sku_code=null){
+    	$code=date('YmdHis',time()).$user_id.rand(1111,9999).$sku_code;
+        $res=Order_master::where('order_sn',$code)->select('order_sn')->get();
+        if(count($res)==0){
+            return $code;    
+        }else{
+            $this->create_order_code($user_id);
+        }
     }
     /**
      * 确认下单
      */
 	public function add_order(Request $request){
-		$data['sku_code']=$request->input('sku_code');//sku编码
-		$data['goods_id']=$request->input('good_id');//商品的ID
 		/*$data['customer_name']=$request->session()->get('user_id');*///用户ID
         $data['customer_name']=1;
-        $data['order_sn']=$this->create_order_code($data['goods_id'],$data['customer_name']);//订单编码
+        $data['order_sn']=$this->create_order_code($data['customer_name']);//订单编码
         $data['create_time']=date('Y-m-d H:i:s',time());//时间
         $res=Order_master::insertGetId($data);
         if(!$res){
             return json(40016,"添加订单失败");return;
         }
         $arr['order_id']=$res;
-        $arr['product_id']=$data['goods_id'];
+        $arr['product_id']=$request->input('good_id');
 		$arr['product_cnt']=$request->input('text_box');//商品数量
 		$arr['product_price']=$request->input('good_price');//订单金额
-        $arr['sku_code']=$data['sku_code'];
+        $arr['sku_code']=$request->input('sku_code');
 		$arr['order_money']=$request->input('good_price')*$arr['product_cnt'];//支付金额
-        $arr['child_order_sn']='cd'.$this->create_order_code($data['goods_id'],$data['customer_name']);
+        $arr['child_order_sn']='cd'.$this->create_order_code($data['customer_name'],$arr['sku_code']);
         $result=Order_detail::insertGetId($arr);
 		if($result){
             $last=base64_encode("order_sn=".$data['order_sn']."&id=".$res);//总的订单号和主订单的ID
@@ -127,7 +130,8 @@ class GoodinfoController extends Controller
      */
     public function goodattr_change(Request $request){
     	$attr=$request->input('str');
-    	$attrinfo=Goods_sku::where('sku_desc',"$attr")->select('sku_id','price','inventory')->get();
+        $good_id=$request->input('good_id');
+    	$attrinfo=Goods_sku::where('sku_desc',"$attr")->where('goods_id',"$good_id")->select('sku_id','price','inventory')->get();
     	if(isset($attrinfo[0])){
             return json(40011,"查询成功",$attrinfo);
         }else{
