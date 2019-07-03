@@ -16,6 +16,8 @@ use App\Models\Address;
 use App\Models\Order_detail;
 use App\Models\Nationwide_address;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Cache;
+
 
 class GoodinfoController extends Controller
 {
@@ -108,6 +110,7 @@ class GoodinfoController extends Controller
         $result=Order_detail::insertGetId($arr);
 		if($result){
             $last=base64_encode("order_sn=".$data['order_sn']."&id=".$res);//总的订单号和主订单的ID
+            Cache::put('order'.$data['customer_name'],$data['order_sn'],1800);
 			return json(40015,"添加订单成功",$last);
 		}else{
 			return json(40016,"添加订单失败");
@@ -173,23 +176,34 @@ class GoodinfoController extends Controller
     public function payorder(Request $request){
         $code=$request->input('code');
         parse_str(base64_decode($code),$arr);
-        $res['orderinfo']['order'][]=Order_detail::where('order_id',$arr['id'])->leftjoin('goods','Order_detail.product_id','=','goods.id')->leftjoin('goods_sku','Order_detail.sku_code','=','goods_sku.sku_id')->select('Order_detail.*','goods.good_name','goods_sku.sku_desc')->get()->toArray();
-        /*$user_id=$request->session()->get('user_id');*/
-        $user_id=1;
-        $res['orderinfo']['total_price']=0;
-        foreach($res['orderinfo']['order'] as $k=>$v){
-            foreach ($v as $key => $value) {
-                $res['orderinfo']['total_price']+=$value['order_money'];
+        $a=Order_master::where('order_sn',$arr['order_sn'])->select('order_status')->get()->toArray();
+        if($a[0]['order_status']==1){
+            return json(40017,"已支付，请勿重复提交");
+        }elseif($a[0]['order_status']==0){
+            /*usere_id=$request->session()->get('user_id');*///用户ID
+            $user_id=1;
+            $order=Cache::get('order'.$user_id);
+            if(is_null($order)){
+                return json(40018,"订单已失效");
+            }else{
+                $res['orderinfo']['order'][]=Order_detail::where('order_id',$arr['id'])->leftjoin('goods','Order_detail.product_id','=','goods.id')->leftjoin('goods_sku','Order_detail.sku_code','=','goods_sku.sku_id')->select('Order_detail.*','goods.good_name','goods_sku.sku_desc')->get()->toArray();
+                $res['orderinfo']['total_price']=0;
+                foreach($res['orderinfo']['order'] as $k=>$v){
+                    foreach ($v as $key => $value) {
+                        $res['orderinfo']['total_price']+=$value['order_money'];
+                    }
+                }
+                $res['user_integral']=Users::where('id',$user_id)->select('integral')->get();
+                $res['address']=Address::where('u_id',$user_id)->get();
+                $res['order_sn']=$arr['order_sn'];
+                if(count($res['orderinfo'])!=0){
+                    return json(40011,"查询成功",$res);
+                }else{
+                    return json(40014,"查询失败");
+                }    
             }
         }
-        $res['user_integral']=Users::where('id',$user_id)->select('integral')->get();
-        $res['address']=Address::where('u_id',$user_id)->get();
-        $res['order_sn']=$arr['order_sn'];
-        if(count($res['orderinfo'])!=0){
-            return json(40011,"查询成功",$res);
-        }else{
-            return json(40014,"查询失败");
-        }
+        
     }
     public function payment_success(Request $request){
         $order_sn=$request->input('order_sn');
