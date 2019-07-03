@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use Illuminate\Http\Request;
 use App\Models\Order;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,9 +15,16 @@ class FullOrderController extends Controller
     public function FullOrder(Request $request)
     {
     	$data = $request->all();
-    	if(!empty($data['customer_id']) )
+    	if(!empty($data['customer_name']) )
     	{
-    		$data = Order::where('customer_id',$data['customer_id'])->select()->get()->toArray();
+    		$data = DB::table('shop_admin_order_master')->where('customer_name',$data['customer_name'])
+                                    ->join('shop_admin_order_detail','shop_admin_order_master.order_id','=','shop_admin_order_detail.order_id')
+                                    ->join('shop_admin_goods_sku','shop_admin_order_detail.sku_code','=','shop_admin_goods_sku.sku_id')
+                                    ->join('shop_admin_goods','shop_admin_order_detail.product_id','=','shop_admin_goods.id')
+
+                                    ->select()->get()->toArray();
+            // echo "<pre>";
+            // print_r($data);die;
     		if($data)
     		{
     			return response()->json([Response::HTTP_OK,'msg'=>'查询订单成功','data'=>$data]);
@@ -35,9 +43,15 @@ class FullOrderController extends Controller
     public function CommentedOrder(Request $request)
     {
     	$data = $request->all();
-    	if(!empty($data['customer_id']) )
+    	if(!empty($data['customer_name']) )
     	{
-    		$data = Order::where([['customer_id','=',$data['customer_id']] ,['order_status','=',3] ])->select()->get()->toArray();
+            $data = DB::table('shop_admin_order_master')->where([['customer_name','=',$data['customer_name']] ,['order_status','=',3] ])
+                                    ->join('shop_admin_order_detail','shop_admin_order_master.order_id','=','shop_admin_order_detail.order_id')
+                                    ->join('shop_admin_goods_sku','shop_admin_order_detail.sku_code','=','shop_admin_goods_sku.sku_id')
+                                    ->join('shop_admin_goods','shop_admin_order_detail.product_id','=','shop_admin_goods.id')
+
+                                    ->select()->get()->toArray();
+    		// print_r($data);die;
     		if($data)
     		{
     			return response()->json([Response::HTTP_OK,'msg'=>'查询订单成功','data'=>$data]);
@@ -56,9 +70,14 @@ class FullOrderController extends Controller
     public function ReceiveddOrder(Request $request)
     {
     	$data = $request->all();
-    	if(!empty($data['customer_id']) )
+    	if(!empty($data['customer_name']) )
     	{
-    		$data = Order::where([['customer_id','=',$data['customer_id']] ,['order_status','=',1] ])->select()->get()->toArray();
+    		$data = DB::table('shop_admin_order_master')->where([['customer_name','=',$data['customer_name']] ,['order_status','=',1] ])
+                                    ->join('shop_admin_order_detail','shop_admin_order_master.order_id','=','shop_admin_order_detail.order_id')
+                                    ->join('shop_admin_goods_sku','shop_admin_order_detail.sku_code','=','shop_admin_goods_sku.sku_id')
+                                    ->join('shop_admin_goods','shop_admin_order_detail.product_id','=','shop_admin_goods.id')
+
+                                    ->select()->get()->toArray();
     		if($data)
     		{
     			return response()->json([Response::HTTP_OK,'msg'=>'查询订单成功','data'=>$data]);
@@ -77,9 +96,14 @@ class FullOrderController extends Controller
     public function PaidOrder(Request $request)
     {
     	$data = $request->all();
-    	if(!empty($data['customer_id']) )
+    	if(!empty($data['customer_name']) )
     	{
-    		$data = Order::where([['customer_id','=',$data['customer_id']] ,['order_status','=',0] ])->select()->get()->toArray();
+    		$data = DB::table('shop_admin_order_master')->where([['customer_name','=',$data['customer_name']] ,['order_status','=',0] ])
+                                    ->join('shop_admin_order_detail','shop_admin_order_master.order_id','=','shop_admin_order_detail.order_id')
+                                    ->join('shop_admin_goods_sku','shop_admin_order_detail.sku_code','=','shop_admin_goods_sku.sku_id')
+                                    ->join('shop_admin_goods','shop_admin_order_detail.product_id','=','shop_admin_goods.id')
+
+                                    ->select()->get()->toArray();
     		if($data)
     		{
     			return response()->json([Response::HTTP_OK,'msg'=>'查询订单成功','data'=>$data]);
