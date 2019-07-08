@@ -84,13 +84,13 @@ class Shop_apiController extends Controller
             return $this->error('1002','参数缺失');
         }
         // 判断登录数据是否一致
-        $data = User::where('name',$name)->where('pwd',$pwd)->first();
-        $user_id = $data['id'];
-        if(empty($data['name']) || empty($data['pwd']))
+        $arr = User::where('name',$name)->where('pwd',$pwd)->first();
+        $user_id = $arr['id'];
+        if(empty($arr['name']) || empty($arr['pwd']))
         {
             return $this->error('1003','用户名、密码不正确！');
         }
-        if($data['status'] == 0)
+        if($arr['status'] == 0)
         {
             return $this->error('1004','请激活您的账号！');
         }
@@ -102,7 +102,7 @@ class Shop_apiController extends Controller
             // $data = Cache::forever('key',$token);
             $data = Cache::put('key',$token,744*60);
             $res = Users_token::where('user_id',$user_id)->update(['token'=>$token]);
-            return $this->success(['user_id'=>$user_id,'token'=>$token]);
+            return $this->success(['user'=>$arr,'token'=>$token]);
             //实例化
         }
         else
@@ -111,7 +111,7 @@ class Shop_apiController extends Controller
             // $data = Cache::forever('key',$token);
             $data = Cache::put('key',$token,744*60);
             $res = Users_token::insert(['user_id'=>$user_id,'token'=>$token]);
-            return $this->success(['user_id'=>$user_id,'token'=>$token]);
+            return $this->success(['user'=>$arr,'token'=>$token]);
         }
         
     }

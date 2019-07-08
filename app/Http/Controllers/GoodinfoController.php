@@ -174,7 +174,7 @@ class GoodinfoController extends Controller
     public function payorder(Request $request){
         $code=$request->input('code');
         parse_str(base64_decode($code),$arr);
-        $res['orderinfo']['order'][]=Order_detail::where('order_id',$arr['id'])->leftjoin('goods','Order_detail.product_id','=','goods.id')->leftjoin('goods_sku','Order_detail.sku_code','=','goods_sku.sku_id')->select('Order_detail.*','goods.good_name','goods_sku.sku_desc')->get()->toArray();
+        $res['orderinfo']['order'][]=Order_detail::where('order_id',$arr['id'])->leftjoin('goods','order_detail.product_id','=','goods.id')->leftjoin('goods_sku','order_detail.sku_code','=','goods_sku.sku_id')->select('order_detail.*','goods.good_name','goods_sku.sku_desc')->get()->toArray();
         /*$user_id=$request->session()->get('user_id');*/
         $user_id=1;
         $res['orderinfo']['total_price']=0;
